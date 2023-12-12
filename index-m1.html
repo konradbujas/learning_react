@@ -52,6 +52,10 @@
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
     ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
     <script>
       //   document.querySelectorAll(".link").forEach((link) => {
       //     const anchorElement = document.createElement("a");
@@ -66,14 +70,14 @@
         const anchorElement = React.createElement(
           "a",
           {
-            href: "https://zrozumiecreact.pl",
+            href: "https://zrozumreact.pl",
             target: "_blank",
             rel: "noopener noreferrer",
           },
           "Sprawdź stronę kursu!"
         );
         console.log(anchorElement);
-        link.append(anchorElement);
+        ReactDOM.createRoot(link).render(anchorElement);
       });
     </script>
   </body>
