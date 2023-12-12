@@ -48,13 +48,31 @@
       distinctio similique repellendus autem officia doloremque odio molestiae
       possimus.
     </p>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
     <script>
+      //   document.querySelectorAll(".link").forEach((link) => {
+      //     const anchorElement = document.createElement("a");
+      //     anchorElement.textContent = "Sprawdź stronę kursu!";
+      //     anchorElement.href = "http://zrozumiecreact.pl";
+      //     anchorElement.target = "_blank";
+      //     anchorElement.rel = "noopener noreferrer";
+      //     link.append(anchorElement);
+      //   });
+
       document.querySelectorAll(".link").forEach((link) => {
-        const anchorElement = document.createElement("a");
-        anchorElement.textContent = "Sprawdź stronę kursu!";
-        anchorElement.href = "http://zrozumiecreact.pl";
-        anchorElement.target = "_blank";
-        anchorElement.rel = "noopener noreferrer";
+        const anchorElement = React.createElement(
+          "a",
+          {
+            href: "https://zrozumiecreact.pl",
+            target: "_blank",
+            rel: "noopener noreferrer",
+          },
+          "Sprawdź stronę kursu!"
+        );
+        console.log(anchorElement);
         link.append(anchorElement);
       });
     </script>
